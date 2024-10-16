@@ -3,3 +3,6 @@
 @import '@cds/core/styles/theme.dark.min.css';
 @import '@clr/ui/clr-ui.min.css';
 
+*, hmtl {
+    scroll-behavior: smooth !important;
+}
