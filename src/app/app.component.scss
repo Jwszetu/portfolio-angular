@@ -1,47 +1,117 @@
+@import url(../styles/theme.css);
+
+.main-container {
+    background-color: var(--color-background);
+    color: var(--color-copy);
+}
+
 .playfair {
     font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
+    //font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
 
-* , .outline {
-    outline: 1px solid yellow;
-    //background-color: aqua;
+// * {
+//     outline: 1px solid red;
+// }
+
+#title {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+
+    font-size: var(--text-l);
+    font-weight: 600;
+    font-style: italic;
+
+    translate: -50%;
 }
 
-#indtroduction {
-    border-right: 1px solid var(--clr-p1-color);
-    border-bottom: 1px solid var(--clr-p1-color);
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    .home {
+        border-right: 0.2rem solid var(--color-border);
+        border-bottom: 0.2rem solid var(--color-border);
+        display: flex;
+        flex-direction: column;
+        padding: 0 2pc 3pc 0;
+
+        .name {
+            font-size: 6rem;
+            height: 100px;
+        }
+
+        .sm-description {
+            font-size: 1.5rem;
+            margin: 15px 0 0 30px;
+        }
+    }
+
+    .about-me {
+        min-width: 97%;
+        min-height: 95%;
+
+        .name {
+            font-size: 4rem;
+            height: 100px;
+        }
+
+        .sm-description {
+            font-size: 1.5rem;
+            margin: 15px 0 0 30px;
+        }
+
+        .info {
+            box-sizing: border-box;
+            margin: 1rem;
+
+            display: grid;
+            grid-template-columns: [first] 25% [line2] 60% [line3] 15%;
+            column-gap: 1rem;
+
+            &-personal, &-experience {
+                padding: 1rem;
+            }
+            &-experience {
+            }
+        }
+    }
+    .projects {
+    }
+    .contact-me {
+    }
 }
 
 .nav-bar {
     --nav-text-size: 32pt;
-    padding-right: var(--cds-global-layout-space-xl);
-    padding-top: var(--cds-global-layout-space-xxl);
 
     position: fixed;
     z-index: 100;
     right: 0;
     top: 0;
 
+    margin: 2rem 1rem 0 0;
+
     ul > li {
         font-size: var(--nav-text-size);
         font-weight: 600;
         text-align: right;
         list-style-type: none;
-        
+
         &:hover {
-            font-size: calc(var(--nav-text-size) * 2);
+            font-size: calc(var(--nav-text-size) * 1.5);
             font-weight: 800;
             font-style: italic;
             list-style-type: "- ";
-            border-bottom: 1px solid var(--clr-p1-color);
+            border-bottom: 1px solid var(--color-border);
         }
     }
 }
 
 section {
-    height:  100vh;
+    height: 100vh;
 }

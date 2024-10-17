@@ -10,4 +10,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'portfolio-angular';
+  pageTitle: string = '';
+
+  sceneChange(el?: HTMLElement): void {
+    var menuItems = Array.from(document.getElementsByClassName("menu-item"));
+    menuItems.map(element => element.removeAttribute('hidden'))
+    this.pageTitle = <string> el?.innerText;
+  }
+
 }

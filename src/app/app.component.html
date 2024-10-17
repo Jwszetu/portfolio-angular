@@ -1,23 +1,30 @@
-<div class="nav-bar playfair">
-  <ul>
-    <li onclick="location.href='#';"  style="cursor:pointer;">Home</li>
-    <li onclick="location.href='#about-me';"  style="cursor:pointer;">About Me</li>
-    <li onclick="location.href='#projects';"  style="cursor:pointer;">Projects</li>
-    <li onclick="location.href='#contact-me';"  style="cursor:pointer;">Contact Me</li>
-  </ul>
-</div>
-<section id="home">
-  <div id="introduction">
+<div class="main-container">
+  <div class="nav-bar playfair">
+    <ul>
+      <li class="menu-item" #home (click)="sceneChange(home)">Home</li>
+      <li class="menu-item" #aboutMe (click)="sceneChange(aboutMe)">About Me</li>
+      <li class="menu-item" #projects (click)="sceneChange(projects)">Projects</li>
+      <li class="menu-item" #contactMe (click)="sceneChange(contactMe)">Contact Me</li>
+    </ul>
+  </div>
+  <div id="title" class="playfair">{{ pageTitle }}</div>
+
+  <section id="container">
+    <div class="about-me">
       <div class="name playfair">Jowi Szetu</div>
-      <div class="sm-description">Full Stack Software Developer</div>   
-  </div>
-</section>
-<section id="about-me">
-</section>
-<section id="projects">
-</section>
-<section id="contact-me">
-  <div class="center outline">
-    This is the contact me section
-  </div>
-</section> 
+      <div class="sm-description">Full Stack Software Developer</div>
+      <div class="info">
+        <div class="info-personal">
+          <p>d</p>
+          <p>this is content</p>
+          <p>stuff</p>
+        </div>
+        <div class="info-experience">
+          <p>d</p>
+          <p>this is content</p>
+          <p>stuff</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
